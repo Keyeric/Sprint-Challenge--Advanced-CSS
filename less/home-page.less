@@ -39,21 +39,31 @@
 
       @media @x{
         display:none;
-      }//closes X-Sky, X-Launch
-  
+      }//closes X-Sky, X-Launch  
         
     }//closes Sky, Launch images
 
     .blast{
-      width: 90%;
-      margin: 2rem auto;
+      width: 28%;
+      margin: 2rem 2.5%;
       border-radius: 2rem;
-    }
+      height: 100%;
+      
+      @media @x{
+        width: 90%;
+        margin: 2rem auto;
+        border-radius: 2rem;
+      }//closes X-Blast
+    }//closes Blast
 
   }//closes space images
 
   .visit-planets {
     padding: 1.5rem;
+
+    @media @x{
+      margin-bottom: -5rem;
+    }
 
     h3 {      
       .left();
@@ -69,13 +79,23 @@
   .walk {
     margin-top: 6rem;
     border-top: 0.1rem solid @main-border-color;
-    padding: 5rem 6rem;
+    padding: 5rem 6rem; //did this CAUSE Line 59?
     .flex(center, flex-start);
+
+    
+    @media @x{
+      flex-direction: column-reverse;
+      padding: 2rem 0;
+    }//closes X-Walk
 
     .walk-text {
       margin:auto;
       flex-direction: column;
       width: 50%;
+
+      @media @x{
+        width:90%;
+      }//closes X-Walk Text
 
       h3 {
         .left();
@@ -98,12 +118,22 @@
         padding: 1rem 2rem;
         border-radius:1rem;
         cursor: pointer;
+
+        @media @x{
+          margin:0 auto;
+          width:50rem;
+        }//closes X-Muffin
       }//closes Muffin button
     }//closes walk block
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @x{
+        width:90%;
+        margin-bottom: 2rem;
+      }//closes X-Walk img
       
       img {
         width: 100%;
