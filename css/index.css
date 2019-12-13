@@ -97,6 +97,11 @@ p {
   background-color: #F6F6F6;
   font-size: 2.5rem;
 }
+@media (max-width: 23.45rem) {
+  .navSec {
+    font-size: 1.5rem;
+  }
+}
 .navSec nav {
   margin: 1%;
   padding-bottom: 1%;
@@ -106,6 +111,11 @@ p {
   text-decoration: none;
   padding: 0 0.5%;
   margin: 0 0.1%;
+}
+@media (max-width: 23.45rem) {
+  .navSec nav a {
+    margin: 0 1%;
+  }
 }
 footer {
   color: #22283B;
@@ -176,7 +186,8 @@ footer {
   font-size: 3rem;
   color: #F6F7F8;
   background-color: #22283A;
-  width: 25%;
+  width: 25rem;
+  white-space: nowrap;
   text-align: center;
   padding: 1rem 2rem;
   border-radius: 1rem;
