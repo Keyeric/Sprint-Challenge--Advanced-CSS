@@ -4,72 +4,137 @@
 
   .intro {
 
-    h2 {
-      padding: 15px;
-    }
+      h2 {
+        .left();
+        padding: 1.5rem;
+        
+      }//closes header h2
 
-    p {
-      padding:0 15px;
-    }
-  
-  }
+      p {
+        .left();
+        padding:0 1.5rem;
+      }//closes header text 
+      
+      img{
+        width:80%;
+        border-radius: 1rem;
+
+        @media @x{
+          width: 100%;
+          height: 15vh;
+        }//closes X-headerImg
+      }//closes header img
+  }//closes header
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 
-    img {
+    .sky, .launch, {
       width: 28%;
-      margin: 20px 2.5%;
-      border-radius: 20px;
+      margin: 2rem 2.5%;
+      border-radius: 2rem;
       height: 100%;
-    }
-  }
+
+      @media @x{
+        display:none;
+      }//closes X-Sky, X-Launch  
+        
+    }//closes Sky, Launch images
+
+    .blast{
+      width: 28%;
+      margin: 2rem 2.5%;
+      border-radius: 2rem;
+      height: 100%;
+
+      @media @x{
+        width: 90%;
+        margin: 2rem auto;
+        border-radius: 2rem;
+      }//closes X-Blast
+    }//closes Blast
+
+  }//closes space images
 
   .visit-planets {
-    padding: 15px;
+    padding: 1.5rem;
 
-    h3 {
-      margin-top: 11px;
+    @media @x{
+      margin-bottom: -5rem;
     }
+
+    h3 {      
+      .left();
+      margin-top: 1.1rem;
+    }//closes planets header
 
     p {
-      margin-top: 13px;
-    }
-  }
+      margin-top: 1.3rem;
+      .left();
+    }//closes planets text
+  }//closes planets
 
   .walk {
-    margin-top: 60px;
-    border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+    margin-top: 6rem;
+    border-top: 0.1rem solid @main-border-color;
+    padding: 5rem 6rem; //did this CAUSE Line 59?
+    .flex(center, flex-start);
+
+    
+    @media @x{
+      flex-direction: column-reverse;
+      padding: 2rem 0;
+    }//closes X-Walk
 
     .walk-text {
+      margin:auto;
+      flex-direction: column;
       width: 50%;
 
+      @media @x{
+        width:90%;
+      }//closes X-Walk Text
+
       h3 {
-        margin-bottom: 10px;
-      }
+        .left();
+        margin-bottom: 1rem;
+      }//closes walk header
 
       p {
-        margin-bottom: 26px;
-      }
+        .left();
+        margin-bottom: 2.6rem;
+      }//closes walk text
 
-      .btn {
-      }
-    }
+      .btn{
+        .muffin(@btn-bg-color, @porcelain);
+
+        &:hover{
+          .muffin(@porcelain, @btn-bg-color);
+        }//closes muffin button hover
+
+        @media @x{
+          margin:0 auto;
+          width:50rem;
+        }//closes X-Muffin
+      }//closes Muffin button
+    }//closes walk block
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @x{
+        width:90%;
+        margin-bottom: 2rem;
+      }//closes X-Walk img
       
       img {
         width: 100%;
         height: auto;
-        border-radius: 10px;
-      }
-    }
-  }
+        border-radius: 1rem;
+      }//closes walk walk image (astronaut)
+    }//closes walk img
+  }//closes walk
 }// home

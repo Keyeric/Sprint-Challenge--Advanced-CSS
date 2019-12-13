@@ -1,1 +1,30 @@
 // Navigation code here
+
+.navSec{
+    background-color: @wild-sand;
+    font-size:2.5rem;
+
+    @media @x{
+        font-size: 1.5rem;
+    }//closes X-Section
+
+    h1{
+        margin-bottom:1rem;
+    }
+
+    nav{
+        margin: 1%;
+        padding-bottom: 1%;
+
+        a{
+        color:@nav-font;
+        text-decoration: none;
+        padding: 0 0.5%;
+        margin: 0 0.1%;
+
+        @media @x{
+            margin: 0 1%;
+        }//closes X-A
+        }//closes nav a
+    }//closes nav
+}//closes nav section
